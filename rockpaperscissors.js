@@ -24,6 +24,7 @@ function playRound(playerSelection, computerSelection, playerName_1) {
 }
 
 // Function to play the game for a given no of rounds.
+
 function game() {
     score_1 = 0;
     score_2 = 0;
@@ -59,10 +60,8 @@ function game() {
         return "The game is a draw....."
     }
 }
-
-playerName_1 = prompt("Enter your name:");
 try {
-    
+    playerName_1 = prompt("Enter your name:");
     playerSelection = prompt("What is your choice:Rock/Paper/Scissor");
 
     if ((playerSelection.toLowerCase() !== "rock") && (playerSelection.toLowerCase() !== "paper") && (playerSelection.toLowerCase() !== "scissor")) {
