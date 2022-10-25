@@ -1,4 +1,17 @@
 h1{
     text-align: center;
     font-size: 3rem;
+    color: whitesmoke;
+}
+body{
+    background-color: #001524;
+    color: whitesmoke;
+}
+#scores div{
+    display: inline;
+}
+#scores{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
