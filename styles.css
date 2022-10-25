@@ -7,6 +7,12 @@ body{
     background-color: #001524;
     color: whitesmoke;
 }
+form{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
 #scores div{
     display: inline;
 }
@@ -14,4 +20,11 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+}
+#buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center; 
+    height: 100vh;
 }
