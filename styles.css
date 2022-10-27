@@ -26,5 +26,23 @@ form{
     flex-direction: row;
     justify-content: space-around;
     align-items: center; 
-    height: 100vh;
+    height: 50vh;
+}
+#result {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 50px 20px;
+}
+#result div {
+    width: 50%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    color: black;
+    font-size: 40px;
+    font-family: 'Black And White Picture', sans-serif;
 }
