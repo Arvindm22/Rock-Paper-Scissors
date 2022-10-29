@@ -30,6 +30,29 @@ function playRound(playerSelection, computerSelection) {
         
 }
 
+function res(r){
+        if (r === playerName) {
+                player.innerText = `${playerName}:${score_1}`
+                display.innerText = `${playerName} wins`;
+        }
+        else if (r === 'computer') {
+                computer.innerText = `Computer:${score_2}`;
+                display.innerText = `computer wins`;
+        }
+        else {
+                display.innerText = result;
+        }
+}
+
+function win(s1,s2){
+        if (s1 === winningScore || s2 === winningScore){
+                rock.disabled = true;
+                paper.disabled = true;
+                scissor.disabled = true;
+                display.innerText = `Game Over`;
+        }
+}
+
 let info = document.querySelector('form');
 let player = document.querySelector('#player');
 let computer = document.querySelector('#computer');
@@ -67,17 +90,8 @@ rock.addEventListener('click', () => {
                 console.log(computerSelection);
                 result = playRound(playerSelection, computerSelection);
                 console.log(result);
-                if (result === playerName) {
-                        player.innerText = `${playerName}:${score_1}`
-                        display.innerText = `${playerName} wins`;
-                }
-                else if (result === 'computer') {
-                        computer.innerText = `Computer:${score_2}`;
-                        display.innerText = `computer wins`;
-                }
-                else {
-                        display.innerText = result;
-                }
+                res(result);
+                win(score_1, score_2);
         }
 })
 
@@ -92,20 +106,8 @@ paper.addEventListener('click', () => {
                 console.log(computerSelection);
                 result = playRound(playerSelection, computerSelection);
                 console.log(result);
-                if (result === playerName) {
-
-                        player.innerText = `${playerName}:${score_1}`;
-                        display.innerText = `${playerName} wins`;
-                }
-                else if (result === 'computer') {
-
-                        computer.innerText = `Computer:${score_2}`;
-                        display.innerText = `computer wins`;
-                }
-                else {
-                        display.innerText = result;
-                }
-
+                res(result);
+                win(score_1, score_2);
         }
 })
 
@@ -120,17 +122,9 @@ scissor.addEventListener('click', () => {
                 console.log(computerSelection);
                 result = playRound(playerSelection, computerSelection);
                 console.log(result);
-                if (result === playerName) {
-
-                        player.innerText = `${playerName}:${score_1}`;
-                        display.innerText = `${playerName} wins`;
-                }
-                else if (result === 'computer') {
-
-                        computer.innerText = `Computer:${score_2}`;
-                }
-                else {
-                        display.innerText = result;
-                }
+                res(result);
+                win(score_1, score_2);                
         }
 })
+
+
