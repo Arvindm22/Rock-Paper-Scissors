@@ -45,14 +45,22 @@ function res(r){
 }
 
 function win(s1,s2){
-        if (s1 === winningScore || s2 === winningScore){
+        if (s1 === winningScore ){
                 rock.disabled = true;
                 paper.disabled = true;
                 scissor.disabled = true;
-                display.innerText = `Game Over`;
+                display.innerText = `Game Over ${playerName}Congrats!!!You have won the game...`
+        }
+        if(s2 === winningScore){ 
+                rock.disabled = true;
+                paper.disabled = true;
+                scissor.disabled = true;
+                display.innerText = `Game Over...Sorry ${playerName}....
+                                     You have lost the game...
+                                     Computer Wins..`
         }
 }
-
+        
 let info = document.querySelector('form');
 let player = document.querySelector('#player');
 let computer = document.querySelector('#computer');
