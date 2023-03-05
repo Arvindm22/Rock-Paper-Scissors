@@ -1,5 +1,6 @@
 let playerSelection;
 let computerSelection;
+
 // Function to randomly choose rock, paper or scissor (Computer's Play) 
 
 function getComputerChoice() {
@@ -30,6 +31,8 @@ function playRound(playerSelection, computerSelection) {
         
 }
 
+//Function to Display the result after every round
+
 function res(r){
         if (r === playerName) {
                 player.innerText = `${playerName}:${score_1}`
@@ -44,12 +47,19 @@ function res(r){
         }
 }
 
+//Function to stop the game when either player scores 5 points and display the winner of the game.
+
 function win(s1,s2){
         if (s1 === winningScore ){
                 rock.disabled = true;
                 paper.disabled = true;
                 scissor.disabled = true;
                 display.innerText = `Game Over ${playerName}Congrats!!!You have won the game...`
+                const restart = document.querySelector('#Restart')
+                const playAgain = document.createElement('button')
+                playAgain.innerText = 'Play Again'
+                
+                
         }
         if(s2 === winningScore){ 
                 rock.disabled = true;
@@ -58,9 +68,17 @@ function win(s1,s2){
                 display.innerText = `Game Over...Sorry ${playerName}....
                                      You have lost the game...
                                      Computer Wins..`
+                const restart = document.querySelector('#Restart')
+                const playAgain = document.createElement('button')
+                playAgain.innerText = 'Play Again'
+                restart.append(playAgain)
+                playAgain.addEventListener('click',() => {
+                        alert('Working')
+                })
         }
 }
-        
+    
+
 let info = document.querySelector('form');
 let player = document.querySelector('#player');
 let computer = document.querySelector('#computer');
@@ -86,6 +104,7 @@ const display = document.querySelector('#result div');
 const b = document.querySelector('#buttons');
 let result;
 let winningScore = 5;
+
 
 rock.addEventListener('click', () => {
         if (!playerName) {
