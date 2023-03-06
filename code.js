@@ -55,12 +55,7 @@ function win(s1,s2){
                 paper.disabled = true;
                 scissor.disabled = true;
                 display.innerText = `Game Over ${playerName}Congrats!!!You have won the game...`
-                const restart = document.querySelector('#Restart')
-                const playAgain = document.createElement('button')
-                playAgain.innerText = 'Play Again'
-                
-                
-        }
+                }
         if(s2 === winningScore){ 
                 rock.disabled = true;
                 paper.disabled = true;
@@ -68,13 +63,7 @@ function win(s1,s2){
                 display.innerText = `Game Over...Sorry ${playerName}....
                                      You have lost the game...
                                      Computer Wins..`
-                const restart = document.querySelector('#Restart')
-                const playAgain = document.createElement('button')
-                playAgain.innerText = 'Play Again'
-                restart.append(playAgain)
-                playAgain.addEventListener('click',() => {
-                        alert('Working')
-                })
+               
         }
 }
     
