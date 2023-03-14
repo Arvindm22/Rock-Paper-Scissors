@@ -117,14 +117,15 @@ form {
 }
 
 #result div {
+
     width: 50%;
     height: 200px;
     display: flex;
-    flex-direction: row;
+    flex-direction: row; 
     justify-content: center;
     align-items: center;
-    background-color: whitesmoke;
-    color: black;
+    background-color:transparent;
+    color:white;
     font-size: 40px;
     font-family: 'Black And White Picture', sans-serif;
 }
